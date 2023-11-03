@@ -43,7 +43,8 @@ struct ContentView: View {
     
     var body: some View {
         HStack {
-            HStack {
+            //left column
+            VStack {
                 
                 // Left column
                 VStack {
