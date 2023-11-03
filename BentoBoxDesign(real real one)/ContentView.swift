@@ -46,86 +46,88 @@ struct ContentView: View {
             //left column
             VStack {
                 
-                // Left column
-                VStack {
-                    HStack {
-                        ZStack{
-                            
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(mediumGray)
-                            Image("Thunderbolt 2")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 60)
-                            VStack{
-                                Spacer()
-                                Text("Thunderbolt 4")
-                                    .foregroundStyle(.black)
-                                
-                                
-                            }
-                            
-                            
-                        }
+
+                HStack {
+                    ZStack{
                         
                         RoundedRectangle(cornerRadius: 10)
                             .fill(mediumGray)
-                        
+                        Image("Thunderbolt 2")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 60)
+                        VStack{
+                            Spacer()
+                            Text("Thunderbolt 4")
+                                .foregroundStyle(.black)
+                            
+                            
+                        }
                         
                         
                     }
+                    
                     RoundedRectangle(cornerRadius: 10)
                         .fill(mediumGray)
-                    HStack {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(mediumGray)
+                    
+                    
+                    
+                }
+                
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(mediumGray)
+                
+                HStack {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(mediumGray)
+                        VStack {
+                            
+                            Text("16-core")
+                                .foregroundColor(.black)
+                            Spacer()
                             VStack {
                                 
-                                Text("16-core")
-                                    .foregroundColor(.black)
+                                Text("Neural Engine")
+                                    .font(.system(size: 20))
+                                    .foregroundStyle(LinearGradient(
+                                        colors: [
+                                            .white,
+                                            .purple
+                                        ],
+                                        startPoint: .leading,
+                                        endPoint: .center))
                                 Spacer()
-                                VStack {
-                                    
-                                    Text("Neural Engine")
-                                        .font(.system(size: 20))
-                                        .foregroundStyle(LinearGradient(
-                                            colors: [
-                                                .white,
-                                                .purple
-                                            ],
-                                            startPoint: .leading,
-                                            endPoint: .center))
-                                    Spacer()
-                                }
-                                
-                                
                             }
                             
                             
                         }
                         
+                        
                     }
-                    ZStack{
-                        RoundedRectangle(cornerRadius:10)
-                            .fill(mediumGray)
-                        Text("40%")
-                            .font(.system(size: 25))
-                            .foregroundStyle(LinearGradient(
-                                colors: [
-                                    .white,
-                                    .purple
-                                ],
-                                startPoint: .leading,
-                                endPoint: .center))
-                        VStack{
-                            Spacer()
-                            Text("Faster Neural Engine ")
-                                .font(.system(size: 11))
-                                .foregroundStyle(.black)
-                        }
+                    
+                }
+                
+                ZStack{
+                    RoundedRectangle(cornerRadius:10)
+                        .fill(mediumGray)
+                    Text("40%")
+                        .font(.system(size: 25))
+                        .foregroundStyle(LinearGradient(
+                            colors: [
+                                .white,
+                                .purple
+                            ],
+                            startPoint: .leading,
+                            endPoint: .center))
+                    VStack{
+                        Spacer()
+                        Text("Faster Neural Engine ")
+                            .font(.system(size: 11))
+                            .foregroundStyle(.black)
                     }
                 }
+                
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .fill(mediumGray)
