@@ -74,8 +74,38 @@ struct ContentView: View {
                     
                 }
                 
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(mediumGray)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(mediumGray)
+                    
+                    Text("Over")
+                    .font(.system(size: 20))
+                        .foregroundStyle(LinearGradient(
+                            colors: [
+                                .white,
+                                .purple
+                            ],
+                            startPoint: .leading,
+                            endPoint: .center))
+                    Spacer()
+                    VStack{
+                        Spacer()
+                        Text("67 Billion")
+                        .font(.system(size: 28))
+                        .foregroundStyle(LinearGradient(
+                            colors: [
+                                .white,
+                                .purple
+                            ],
+                            startPoint: .leading,
+                            endPoint: .center))
+                    }
+                    Spacer()
+                    VStack{
+                        
+                    }
+                    
+                }
                 
                 HStack {
                     ZStack {
@@ -98,6 +128,8 @@ struct ContentView: View {
                                         startPoint: .leading,
                                         endPoint: .center))
                                 Spacer()
+                                Text("15.8 trillion ops/s")
+                                    .foregroundStyle(.black)
                             }
                             
                             
