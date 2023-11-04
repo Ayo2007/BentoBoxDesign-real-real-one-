@@ -67,8 +67,34 @@ struct ContentView: View {
                         
                     }
                     
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(mediumGray)
+                   
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(mediumGray)
+                        VStack{
+                            Text("Up to")
+                                .foregroundStyle(.black)
+                            Spacer()
+                            VStack{
+                               
+                            Text("20 %")
+                                    .font(.system(size: 30))
+                                    .foregroundStyle(LinearGradient(
+                                        colors: [
+                                            .white,
+                                            .purple
+                                        ],
+                                        startPoint: .leading,
+                                        endPoint: .center))
+                                Spacer()
+                                VStack{
+                                    Text("Faster CPU")
+                                        .foregroundStyle(.black)
+                                }
+                                
+                            }
+                        }
+                    }
                     
                     
                     
@@ -77,19 +103,25 @@ struct ContentView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(mediumGray)
-                    
-                    Text("Over")
-                    .font(.system(size: 20))
-                        .foregroundStyle(LinearGradient(
-                            colors: [
-                                .white,
-                                .purple
-                            ],
-                            startPoint: .leading,
-                            endPoint: .center))
-                    Spacer()
                     VStack{
+                        
+                        Text("Over")
+                            .font(.system(size: 20))
+                            .foregroundStyle(LinearGradient(
+                                colors: [
+                                    .white,
+                                    .purple
+                                ],
+                                startPoint: .leading,
+                                endPoint: .center))
                         Spacer()
+                        
+                    }
+                    
+                    
+                    
+                    VStack{
+                        
                         Text("67 Billion")
                         .font(.system(size: 28))
                         .foregroundStyle(LinearGradient(
@@ -100,8 +132,19 @@ struct ContentView: View {
                             startPoint: .leading,
                             endPoint: .center))
                     }
-                    Spacer()
+                    
                     VStack{
+                        Spacer()
+                        Text("transistors")
+                            .font(.system(size: 20))
+                            .foregroundStyle(LinearGradient(
+                                colors: [
+                                    .white,
+                                    .purple
+                                ],
+                                startPoint: .leading,
+                                endPoint: .center))
+                        
                         
                     }
                     
@@ -178,14 +221,71 @@ struct ContentView: View {
                 // Top row
                 
                 HStack {
-                    RoundedRectangle(cornerRadius: 10 )
-                        .fill(mediumGray)
-                        .frame(height: 100)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10 )
+                            .fill(mediumGray)
+                        .frame(height: 140)
+                        VStack {
+                            Text("Up to")
+                                .foregroundStyle(.black)
+                            Spacer()
+                        }
+                            
+                        VStack{
+                        
+                            Text("30%")
+                                .font(.system(size: 30))
+                            .foregroundStyle(LinearGradient(
+                                colors: [
+                                    .white,
+                                    .purple
+                                ],
+                                startPoint: .leading,
+                                endPoint: .center))
+                            VStack{
+                                Text("Faster GPU")
+                                    .foregroundStyle(.black)
+                                
+                            }
+                        
+                        }
+                            
+                            
+                        
+                    }
                     
                     
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(mediumGray)
-                        .frame(width:120,height: 100)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(mediumGray)
+                        .frame(width:120,height: 140)
+                        
+                        VStack {
+                            Text("Industry-learning")
+                                .font(.system(size: 14))
+                           
+                                .foregroundStyle(LinearGradient(
+                                    colors: [
+                                        .white,
+                                        .purple
+                                    ],
+                                    startPoint: .leading,
+                                endPoint: .center))
+                            Text("performance")
+                                .font(.system(size: 14))
+                       
+                            .foregroundStyle(LinearGradient(
+                                colors: [
+                                    .white,
+                                    .purple
+                                ],
+                                startPoint: .leading,
+                            endPoint: .center))
+                            
+                        }
+                        
+                        
+                    }
                 }
                 
                 
@@ -204,14 +304,17 @@ struct ContentView: View {
                         Text(" M2")
                             .foregroundStyle(.white)
                     }
-                    .frame(width: 150, height: 150)
+                    .frame(width: 150, height: 130)
                     
                 }
                 
                 // Bottom row
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(mediumGray)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(mediumGray)
                     .frame(height: 95)
+                    
+                }
             }
             
             // Right column
