@@ -281,6 +281,16 @@ struct ContentView: View {
                                 ],
                                 startPoint: .leading,
                             endPoint: .center))
+                            Text("per watt")
+                                .font(.system(size: 14))
+                       
+                            .foregroundStyle(LinearGradient(
+                                colors: [
+                                    .white,
+                                    .purple
+                                ],
+                                startPoint: .leading,
+                            endPoint: .center))
                             
                         }
                         
@@ -298,7 +308,7 @@ struct ContentView: View {
                     
                     // Chip
                     ZStack {
-                        RoundedRectangle(cornerRadius: 10)
+                    Rectangle()
                             .fill(.black)
                         
                         Text(" M2")
@@ -313,14 +323,60 @@ struct ContentView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(mediumGray)
                     .frame(height: 95)
+                    VStack {
+                        Text("Second genration")
+                            .font(.system(size: 15))
+                            .foregroundStyle(.black)
+                        Text("5 nm technology")
+                            .font(.system(size: 35))
+                            .foregroundStyle(LinearGradient(
+                                colors: [
+                                    .white,
+                                    .purple
+                                ],
+                                startPoint: .leading,
+                            endPoint: .center))
+                       
+                    }
+                   
                     
                 }
             }
             
             // Right column
             VStack{
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(mediumGray)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(mediumGray)
+                    VStack {
+                        Text("Up to")
+                            .font(.system(size: 15))
+                            .foregroundStyle(.black)
+                        Spacer()
+                    }
+                    VStack{
+                        Text("96 GB")
+                            .font(.system(size: 37))
+
+                            .foregroundStyle(LinearGradient(
+                                colors: [
+                                    .white,
+                                    .purple
+                                ],
+                                startPoint: .leading,
+                            endPoint: .center))
+                    }
+                    VStack{
+                        Spacer()
+                        Text("LPDDR5 memory")
+                            .font(.system(size: 15))
+                            .foregroundStyle(.black)
+                        
+                
+                   
+                    }
+                    
+                }
                 HStack {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
@@ -380,8 +436,31 @@ struct ContentView: View {
                     
                     
                 }
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(mediumGray)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(mediumGray)
+                    ZStack{
+                        VStack {
+                            Text("400 GB/s")
+                                .font(.system(size: 35))
+                                .foregroundStyle(LinearGradient(
+                                    colors: [
+                                        .white,
+                                        .purple
+                                    ],
+                                    startPoint: .leading,
+                                endPoint: .center))
+                        }
+                        VStack{
+                           Spacer()
+                            Text("Memory bandwidth")
+                                .font(.system(size: 18))
+                                .foregroundStyle(.black)
+                            
+                        }
+                        
+                    }
+                }
                 
             }
             
