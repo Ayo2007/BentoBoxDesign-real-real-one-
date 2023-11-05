@@ -313,6 +313,19 @@ struct ContentView: View {
                         
                         Text(" M2")
                             .foregroundStyle(.white)
+                        VStack {
+                            Spacer()
+                            Text("MAX")
+                                .font(.system(size: 50))
+                            
+                                .foregroundStyle(LinearGradient(
+                                     colors: [
+                                         .white,
+                                         .purple
+                                     ],
+                                     startPoint: .leading,
+                                 endPoint: .center))
+                        }
                     }
                     .frame(width: 150, height: 130)
                     
